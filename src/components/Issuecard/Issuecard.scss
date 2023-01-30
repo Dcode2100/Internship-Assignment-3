@@ -1,0 +1,44 @@
+
+.card{
+    width: 98.5%;
+    display: flex;
+    border: 1px solid #e1e4e8;
+    border: 1px 0px 1px 0px;
+    padding-left: 0.7rem;
+    
+    .issueopen{
+       margin-top: 1.7%;
+    }
+}
+
+.card-container-left{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0.7rem 0rem 0.7rem 0.7rem;
+
+    .card-text-data{
+    font-weight: 600;
+        span{
+            display: block;
+            width: 80%;
+            overflow: hidden;
+        }
+    }
+    @media screen and (max-width:600px) {
+        .card-text-data{
+            span{
+                display: block;
+                width: 95%;
+                overflow: hidden;
+            }
+        }
+    }
+    .card-date-data{
+        span{
+            color: #575f6a;
+            font-size: small;
+        };
+    }
+}

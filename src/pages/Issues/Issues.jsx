@@ -5,9 +5,9 @@ import Issuecardlist from '../../components/Issuecardlist/Issuecardlist';
 
 const Issues = () => {
   return (
-    <div>
+    <div className='issue-page'>
       <Header />
-        <div className="issue"><Issuecardlist /></div>
+      <div className="issue"><Issuecardlist /></div>
       </div>
   );
 }

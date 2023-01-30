@@ -1,0 +1,115 @@
+.issuecardlist {
+    display: flex;
+    justify-content: center;
+}
+
+.issuecardlist-container {
+    width: 80%;
+    margin-top: 2rem;
+    border: 3px solid #CED7DE;
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    
+    .left-sm{
+        display: none;
+    }
+}
+@media screen and (max-width:600px) {
+    .issuecardlist-container{
+        width:100%;
+        border: none;
+    
+    .left-sm{
+        display: flex;
+        margin-left: 0.7rem;
+        align-items: center;
+        margin-bottom: 0.5rem;
+        .open {
+            display: flex;
+            color: rgb(42, 41, 41);
+
+            span {
+                margin-left: 0.3rem;
+                font-weight: 500;
+                
+            }
+        }
+
+        .closed {
+            margin-left: 0.5rem;
+            color: #575f6a;
+            font-size: small;
+        }
+    }
+    }
+}
+
+.issuecardlist-header {
+    border: 2px solid #CED7DE;
+    background-color: #F4F8FB;
+    border-radius: 5px 5px 0 0;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+
+    .left {
+        display: flex;
+        align-items: center;
+        margin-left: 0.7rem;
+
+        .open {
+            display: flex;
+            color: rgb(42, 41, 41);
+
+            span {
+                margin-left: 0.3rem;
+                font-weight: 500;
+            }
+        }
+
+        .closed {
+            margin-left: 0.5rem;
+            color: #575f6a;
+            font-size: small;
+        }
+    }
+
+    .right {
+        width: 35%;
+        display: flex;
+        align-items: center;
+        margin-right: 1rem;
+        justify-content: space-between;
+
+        span {
+            color: #575f6a;
+            font-size: 12px;
+        }
+    }
+}
+@media screen and (max-width:600px){
+    .issuecardlist-header{
+        width: 100;
+    .left{
+        display: none;
+    }
+    .right {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        span {
+            color: #575f6a;
+            font-size: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+}

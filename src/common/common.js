@@ -11,11 +11,7 @@ import {
 export const links = [
   { label: "Code", route: "/code", icon: <GoCode /> },
   { label: "Issue", route: "/issues", icon: <GoIssueOpened /> },
-  {
-    label: "Pull requests",
-    route: "/pullrequests",
-    icon: <GoGitPullRequest />,
-  },
+  { label: "Pullrequest", route: "/pullrequest", icon: <GoGitPullRequest />,},
   { label: "Actions", route: "/actions", icon: <GoPlay /> },
   { label: "Projects", route: "/projects", icon: <GoProject /> },
   { label: "Wiki", route: "/wiki", icon: <GoInfo /> },

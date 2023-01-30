@@ -3,6 +3,7 @@ import axios from "axios";
 import InfiniteScroll from "react-infinite-scroller";
 import Issuecard from "../Issuecard/Issuecard";
 import "./Issuecardlist.scss";
+import { GoIssueOpened } from "react-icons/go";
 
 const Issuecardlist = () => {
   const [issues, setIssues] = useState([]);
@@ -22,24 +23,51 @@ const Issuecardlist = () => {
     }
   };
 
+  useEffect(() => {}, []);
+
   return (
     <div className="issuecardlist">
-      <div className="issuecardlist-header">
-        <div className="left">left</div>
-        <div className="right">right</div>
-      </div>
+      <div className="issuecardlist-container">
+        <div className="left-sm">
+          <div className="open">
+            <div>
+              <GoIssueOpened />
+            </div>
+            <span>625 Open</span>
+          </div>
+          <div className="closed"> 10,104 Closed</div>
+        </div>
+        <div className="issuecardlist-header">
+          <div className="left">
+            <div className="open">
+              <div>
+                <GoIssueOpened />
+              </div>
+              <span>625 Open</span>
+            </div>
+            <div className="closed"> 10,104 Closed</div>
+          </div>
 
-      <div className="issuecard-data-container">
-        <InfiniteScroll
-          pageStart={1}
-          loadMore={loadIssues}
-          hasMore={hasMore}
-          loader={<div className="loader">Loading ...</div>}
-        >
-          {issues.map((issue,index) => (
-            <Issuecard key={index} data={issue} />
-          ))}
-        </InfiniteScroll>
+          <div className="right">
+            <span>Author</span>
+            <span>Label</span>
+            <span>Projects</span>
+            <span>Sort</span>
+          </div>
+        </div>
+
+        <div className="issuecard-data-container">
+          <InfiniteScroll
+            pageStart={1}
+            loadMore={loadIssues}
+            hasMore={hasMore}
+            loader={<div className="loader">Loading ...</div>}
+          >
+            {issues.map((issue, index) => (
+              <Issuecard key={index} data={issue} />
+            ))}
+          </InfiniteScroll>
+        </div>
       </div>
     </div>
   );

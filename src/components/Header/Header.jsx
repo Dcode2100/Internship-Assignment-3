@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "./Header.scss";
 import { links } from "../../common/common";
 
+
 const Header = () => {
   return (
     <nav>
@@ -25,7 +26,7 @@ const Header = () => {
         <div className="bottom-navbar">
           {links.map((link, index) => (
             <Link id="links" key={index} to={link.route}>
-              {link.icon} {link.label}
+              {link.icon} <span className="link-label">{link.label}</span>
             </Link>
           ))}
         </div>
